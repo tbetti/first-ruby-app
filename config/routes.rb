@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: "main#index"
 
   # GET to /about
-  get "about", to: "about#index" #looks for "about" in controller folder
+  get "about", to: "about#index", as: :about #looks for "about" in controller folder
 end
