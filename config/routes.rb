@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   # Homepage
   root to: "main#index"
 
-  # GET to /about
+  # to about page
   get "about", to: "about#index", as: :about #looks for "about" in controller folder
+
+  # to sign-up page
+  get "sign_up", to: "registrations#new", as: :sign_up
+
+  # POST request to access users
+  post "sign_up", to: "registrations#create"
 end
