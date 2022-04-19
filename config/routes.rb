@@ -11,6 +11,12 @@ Rails.application.routes.draw do
   # POST request to access users
   post "sign_up", to: "registrations#create"
 
+  # to sign-in page
+  get "sign_in", to: "sessions#new"
+
+  # POST request to access users
+  post "sign_in", to: "sessions#create"
+
   # to log out
   delete "logout", to: "sessions#destroy"
 end
