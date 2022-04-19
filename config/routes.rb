@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   # POST request to access users
   post "sign_up", to: "registrations#create"
+
+  # to log out
+  delete "logout", to: "sessions#destroy"
 end
