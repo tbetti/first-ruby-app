@@ -19,4 +19,8 @@ Rails.application.routes.draw do
 
   # to log out
   delete "logout", to: "sessions#destroy"
+
+  # to access password
+  get "password", to: "passwords#edit", as: :edit_password
+  patch "password", to: "passwords#update"
 end
